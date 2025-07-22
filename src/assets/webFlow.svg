@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.938 69.202">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #336ceb;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Internet_375" data-name="Internet 375">
+    <path class="cls-1" d="M110.938,0l-35.399,69.202h-33.25l14.815-28.68h-.665c-12.221,15.864-30.457,26.308-56.439,28.68v-28.283s16.621-.982,26.393-11.255H0V.002h29.662v24.396l.665-.003L42.449.002h22.433v24.242h.665S78.124,0,78.124,0h32.814Z"/>
+  </g>
+</svg>

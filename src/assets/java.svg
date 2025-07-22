@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.27 108.336">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-1419.032" y1="-391.733" x2="-1419.032" y2="-378.191" gradientTransform="translate(11400.39 3133.862) scale(8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#356bf5"/>
+      <stop offset="1" stop-color="#b734f5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-1416.628" y1="-390.476" x2="-1416.628" y2="-379.416" gradientTransform="translate(11400.39 3133.862) scale(8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#82c4f9"/>
+      <stop offset="1" stop-color="#dcacf9"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-1421.2" y1="-388.968" x2="-1421.2" y2="-381.27" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <g id="Internet_375" data-name="Internet 375">
+    <g id="JS">
+      <path class="cls-3" d="M48.01,108.336c-.185,0-.368-.026-.545-.074l-37.453-10.557c-.8-.227-1.381-.925-1.458-1.753L.008,2.194c-.05-.563.137-1.122.519-1.538.38-.418.919-.656,1.484-.656h92.249c.563,0,1.1.235,1.48.652.38.414.571.969.523,1.532l-8.044,93.757c-.07.837-.658,1.542-1.466,1.766l-38.207,10.557c-.177.048-.356.072-.537.072ZM12.435,94.21l35.58,10.028,36.318-10.034,7.734-90.182H4.215l8.22,90.188Z"/>
+      <path class="cls-2" d="M48.261,10.054v88.479l30.666-8.044,7.541-80.435h-38.207ZM79.178,47.507l-2.262,29.66-25.136,6.284v-10.557l18.098-5.027.251-8.798-18.601,2.765V22.12h29.409l-.754,10.808-19.355.251v16.338l18.349-2.011Z"/>
+      <polygon class="cls-1" points="17.344 76.162 17.344 65.102 35.442 70.129 35.442 22.12 44.239 22.12 44.239 83.703 17.344 76.162"/>
+    </g>
+  </g>
+</svg>

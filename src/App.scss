@@ -1,0 +1,716 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto; // Remove top margin if present
+  padding: 0;     // Remove top padding if present
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+p {
+  color: #ffffff;
+}
+
+
+
+// Navbar Styles
+
+.site-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.1rem 2rem;
+  background: #ffffff00;
+  min-height: 40px;
+  position: fixed;   // Changed from sticky to fixed
+  top: 0;
+  left: 0;
+  width: 100vw;      // Ensure it stretches across the top
+  z-index: 100;
+}
+
+.site-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.site-menu-toggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+
+}
+
+
+// Dropdown Menu Styles
+
+.site-dropdown-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  overflow: hidden;
+  background: #222;
+  color: #fff;
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.site-dropdown-menu.open {
+  height: 100vh;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+
+// Hero Section Styles
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+ .herobox {
+  background: rgba(0, 0, 0, 0.5);
+   border-radius: 15px;
+  z-index: 2;
+
+ }
+
+
+
+.primary-button {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 0.25em 2em;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+
+  /* Optional: remove outline on click, but keep for accessibility if desired */
+  outline: none;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  background: rgba(255,255,255,0.5);
+  color: #222;
+}
+
+.dropdown-button {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 0.25em 2em;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+  width: 180px; // Set a fixed width for all dropdown buttons
+  text-align: center; // Center the text inside the button
+  display: inline-block; // Ensures width is respected
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus {
+  background: rgba(255,255,255,0.5);
+  color: #222;
+}
+
+
+
+// phone section styles
+
+.phone-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.phone-animation {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.phone-content-col {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.phone-content-box {
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone-content-box h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.phone-content-box hr {
+  border-top: 2px solid #ffffff;
+  width: 80%;
+  margin: 1rem auto;
+  opacity: 1;
+}
+
+.phone-content-box p {
+  color: #fff;
+  text-align: left;
+  margin: 0;
+}
+
+
+
+
+
+// tech section styles
+
+.tech {
+  position: relative;
+  background-image: url('./assets/about.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  overflow: hidden;
+
+  @media (max-width: 600px) {
+    min-height: 200vh;
+  }
+
+
+}
+
+.tech-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.0);
+  z-index: 1;
+  /* Parallax effect for overlay */
+  pointer-events: none;
+  /* Optional: add a slight blur for depth */
+  /* backdrop-filter: blur(2px); */
+}
+
+// Base parallax item styles (applies to both images and text boxes)
+.parallax-item {
+  position: absolute;
+  z-index: 2;
+  transition: width 0.3s, top 0.3s, left 0.3s;
+  
+}
+
+// Shared responsive position mixin
+@mixin responsive-position($desktop-top, $desktop-left, $tablet-top, $tablet-left, $mobile-top, $mobile-left) {
+  top: $desktop-top;
+  left: $desktop-left;
+
+  @media (max-width: 900px) {
+    top: $tablet-top;
+    left: $tablet-left;
+  }
+
+  @media (max-width: 600px) {
+    top: $mobile-top;
+    left: $mobile-left;
+  }
+}
+
+// Text box styles
+.parallax-box {
+  background: rgb(255, 255, 255, );
+  border-radius: 15px;
+  padding: 1rem;
+  color: #000000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  box-shadow: 10px 10px 13px rgba(0,0,0,0.8);
+
+  h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #000000;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    color: #000000;
+    text-align: left;
+    padding: .1rem;
+  }
+}
+
+
+
+
+// Example usage for a text box
+.box-configurator {
+  @extend .parallax-item;
+  @extend .parallax-box;
+  @include responsive-position(8%, 1%, 5%, 1%, 2%, 1%);
+  width: 40%;
+
+  @media (max-width: 900px) {
+    width: 50%;
+  }
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+.box-api {
+  @extend .parallax-item;
+  @extend .parallax-box;
+  @include responsive-position(70%, 60%, 60%, 60%, 16%, 35%);
+  width: 35%;
+
+  @media (max-width: 900px) {
+    width: 35%;
+  }
+  @media (max-width: 600px) {
+    width: 60%;
+  }
+}
+
+.box-scheduling {
+  @extend .parallax-item;
+  @extend .parallax-box;
+  @include responsive-position(20%, 40%, 20%, 40%, 68%, 2%);
+  width: 40%;
+
+  @media (max-width: 900px) {
+    width: 45%;
+  }
+  @media (max-width: 600px) {
+    width: 60%;
+  }
+}
+
+.box-ai-integration {
+  @extend .parallax-item;
+  @extend .parallax-box;
+  @include responsive-position(50%, 7%, 60%, 7%, 37%, 2%);
+  width: 40%;
+
+  @media (max-width: 900px) {
+    width: 40%;
+  }
+  @media (max-width: 600px) {
+    width: 90vw;
+  }
+}
+
+
+.box-crm-erp {
+  @extend .parallax-item;
+  @extend .parallax-box;
+  @include responsive-position(-15%, 55%, -15%, 55%, 50%, 2%);
+  width: 40%;
+
+  @media (max-width: 900px) {
+    width: 40%;
+  }
+  @media (max-width: 600px) {
+    width: 90vw;
+  }
+}
+
+
+// Example usage for an image
+.box-wordpress {
+  @extend .parallax-item;
+  @include responsive-position(-20%, 10%, -25%, 10%, -5%, 5%);
+  width: 20%;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    width: 20%;
+  }
+  @media (max-width: 600px) {
+    width: 60%;
+  }
+}
+
+.box-javascript {
+  @extend .parallax-item;
+  @include responsive-position(15%, 20%, 15%, 25%, 28%, 2%);
+  width: 6%;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    width: 8%;
+  }
+  @media (max-width: 600px) {
+    width: 20%;
+  }
+}
+
+
+.box-html {
+  @extend .parallax-item;
+  @include responsive-position(40%, 50%, 20%, 90%, 68%, 64%);
+  width: 6%;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    width: 8%;
+  }
+  @media (max-width: 600px) {
+    width: 15%;
+  }
+}
+
+.box-react {
+  @extend .parallax-item;
+  @include responsive-position(50%, 80%, 40%, 70%, 22%, 5%);
+  width: 6%;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    width: 8%;
+  }
+  @media (max-width: 600px) {
+    width: 25%;
+  }
+}
+
+.box-webflow {
+  @extend .parallax-item;
+  @include responsive-position(10%, 70%, 60%, 50%, -1%, 78%);
+  width: 6%;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    width: 8%;
+  }
+  @media (max-width: 600px) {
+    width: 20%;
+  }
+}
+
+.box-wix {
+  @extend .parallax-item;
+  @include responsive-position(80%, 10%, 85%, 10%, 89%, 65%);
+  width: 6%;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    width: 10%;
+  }
+  @media (max-width: 600px) {
+    width: 28%;
+  }
+}
+
+.box-sass {
+  @extend .parallax-item;
+  @include responsive-position(20%, 90%, 30%, 5%, 85%, 79%);
+  width: 6%;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    width: 10%;
+  }
+  @media (max-width: 600px) {
+    width: 20%;
+  }
+}
+
+
+
+// About section styles
+
+.about {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+
+.about-text-box {
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-text-box h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.about-text-box hr {
+  border-top: 2px solid #ffffff;
+  width: 80%;
+  margin: 1rem auto;
+  opacity: 1;
+}
+
+.about-text-box p {
+  color: #fff;
+  text-align: left;
+  margin: 0;
+}
+
+
+.about-img {
+  width: 65%;
+  max-width: 350px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+// contact section styles
+
+.contact {
+  position: relative;
+  background-image: url('./assets/techBackground.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Parallax effect */
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Lower than your content */
+  pointer-events: none; /* So it doesn't block clicks */
+  background: rgba(0,0,0,0.5); /* Or whatever overlay color you want */
+}
+
+.about-container {
+  position: relative;
+  z-index: 2; /* Higher than the overlay */
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5); /* Optional: white background for contrast */
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+
+// Contact Form Styles
+
+.contact-form {
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.contact-form .form-control {
+  background: none;
+  border: 2px solid #ffffffa6;
+  border-radius: 8px;
+  color: #222;
+  margin-bottom: 1rem;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form .form-control:focus {
+  border-color: #ffffff00;
+  outline: none;
+  box-shadow: none;
+}
+
+.primary-button {
+  margin-top: 1rem;
+}
+
+.contact-form .form-control::placeholder {
+  color: #fff !important;
+  opacity: 0.8;
+}
+
+
+.contact-form .primary-button {
+  display: block;
+  margin: 1rem auto 0 auto;
+  text-align: center;
+}
+
+.contact-form .form-control,
+.contact-form .form-control:focus {
+  background: none !important;
+  color: #fff !important;
+  border: 2px solid #ffffffa6;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+
+
+.contact-info-box h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-info-box hr {
+  border-top: 2px solid #ffffff;
+  width: 80%;
+  margin: 1rem auto;
+  opacity: 1;
+}
+
+.contact-info-box p {
+  color: #fff;
+  text-align: left;
+  margin: 0;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 2; /* Higher than the overlay */
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5); /* Optional: white background for contrast */
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+
+}
+
+
+
+
+
+.site-dropdown-menu {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+.site-dropdown-menu.open {
+  height: 100vh;
+}
+
+.dropdown-button {
+  text-decoration: none;
+}
+
+.dropdown-links a {
+  text-decoration: none;
+}
