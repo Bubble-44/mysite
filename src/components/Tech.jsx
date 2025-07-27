@@ -23,17 +23,21 @@ function Tech() {
     return () => window.removeEventListener('resize', updateIcon);
   }, []);
 
-  // Parallax effect for icon
+   // Parallax effect 
   useEffect(() => {
-    const handleScroll = () => {
+  const handleScroll = () => {
+    if (iconRef.current) {
       const scrolled = window.scrollY;
-      if (iconRef.current) {
-        iconRef.current.style.transform = `translateX(-50%) translateY(${scrolled * 0.15}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      iconRef.current.style.transform = `translateX(-50%) translateY(${scrolled * 0.15}px)`;
+    }
+  };
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleScroll); // Update on resize too
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('resize', handleScroll);
+  };
+}, []);
 
   return (
     <section className="tech position-relative" style={{ overflow: 'hidden' }}>

@@ -234,10 +234,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-attachment: fixed;
+
   overflow: hidden;
 
- 
 
 }
 
@@ -393,7 +392,6 @@ p {
   align-items: center;
   justify-content: center;
   /* Parallax effect */
-  background-attachment: fixed;
   overflow: hidden;
 
   
@@ -526,10 +524,9 @@ p {
 .dropdown-links a {
   text-decoration: none;
 }
-
- @media (max-width: 900px) {
-  .tech,
-  .contact {
-    background-attachment: scroll !important;
-  }
-}
+// @media (max-width: 900px) {
+//   .tech,
+//   .contact {
+//     background-attachment: scroll !important;
+//   }
+// }
