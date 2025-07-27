@@ -23,26 +23,10 @@ function Tech() {
     return () => window.removeEventListener('resize', updateIcon);
   }, []);
 
-   // Parallax effect 
-  useEffect(() => {
-  const handleScroll = () => {
-    if (iconRef.current) {
-      const scrolled = window.scrollY;
-      iconRef.current.style.transform = `translateX(-50%) translateY(${scrolled * 0.15}px)`;
-    }
-  };
-  window.addEventListener('scroll', handleScroll);
-  window.addEventListener('resize', handleScroll); // Update on resize too
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-    window.removeEventListener('resize', handleScroll);
-  };
-}, []);
-
   return (
     <section className="tech position-relative" style={{ overflow: 'hidden' }}>
       <div className="tech-overlay-bottom" />
-      {/* Centered background icon with parallax */}
+      {/* Centered background icon without parallax */}
       <img
         ref={iconRef}
         src={bgIcon}
