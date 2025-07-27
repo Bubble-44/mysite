@@ -526,3 +526,10 @@ p {
 .dropdown-links a {
   text-decoration: none;
 }
+
+ @media (max-width: 900px) {
+  .tech,
+  .contact {
+    background-attachment: scroll !important;
+  }
+}
