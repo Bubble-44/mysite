@@ -513,3 +513,28 @@ overscroll-behavior: none;
 .dropdown-links a {
   text-decoration: none;
 }
+
+
+.hero,
+.tech,
+.contact {
+  min-height: 100svh;
+  height: 100svh;
+}
+
+.hero-video,
+.hero-overlay,
+.tech-bg-icon,
+.contact-overlay {
+  height: 100svh;
+  min-height: 100svh;
+}
+
+.hero,
+.tech,
+.contact {
+  min-height: 100vh;
+  height: 100vh;
+  min-height: 100svh;
+  height: 100svh;
+}
