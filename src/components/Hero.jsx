@@ -22,18 +22,11 @@ function Hero() {
 
     video.addEventListener('ended', handleEnded);
 
-    // Parallax effect: video moves 0.75x slower than scroll
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      if (videoRef.current) {
-        videoRef.current.style.transform = `translateY(${scrolled * 0.5}px)`; // 1 - 0.75 = 0.25
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
+    // Removed parallax scroll effect
 
     return () => {
       video.removeEventListener('ended', handleEnded);
-      window.removeEventListener('scroll', handleScroll);
+      // Removed window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -66,7 +59,18 @@ function Hero() {
                 responsive site that looks great and performs perfectly 
                 on any device.
               </p>
-              <button className="primary-button mt-3">LEARN MORE</button>
+              <button
+  className="primary-button mt-3"
+  onClick={e => {
+  const techSection = document.getElementById('tech');
+  if (techSection) {
+    techSection.scrollIntoView({ behavior: 'smooth' });
+  }
+  e.target.blur(); // Remove focus after click
+}}
+>
+  LEARN MORE
+</button>
             </div>
           </div>
         </div>
