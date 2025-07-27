@@ -1,10 +1,8 @@
 .app-container {
-  max-width: 800px;
   margin: 0 auto; // Remove top margin if present
   padding: 0;     // Remove top padding if present
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  overscroll-behavior: none;
 }
 
 p {
@@ -249,7 +247,7 @@ p {
   z-index: 0;
   pointer-events: none;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(1px);
+  // backdrop-filter: blur(1px);
 }
 
 .tech-overlay-bottom {
@@ -261,7 +259,7 @@ p {
   z-index: 0;
   pointer-events: none;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
+  // backdrop-filter: blur(2px);
 }
 
 
@@ -393,7 +391,7 @@ p {
   justify-content: center;
   /* Parallax effect */
   overflow: hidden;
-
+overscroll-behavior: none;
   
 }
 
@@ -408,15 +406,6 @@ p {
   pointer-events: none; /* So it doesn't block clicks */
   background: rgba(0,0,0,0.5); /* Or whatever overlay color you want */
   backdrop-filter: blur(1px); /* Optional: adds a blur effect */
-}
-
-.about-container {
-  position: relative;
-  z-index: 2; /* Higher than the overlay */
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.5); /* Optional: white background for contrast */
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 
@@ -524,9 +513,3 @@ p {
 .dropdown-links a {
   text-decoration: none;
 }
-// @media (max-width: 900px) {
-//   .tech,
-//   .contact {
-//     background-attachment: scroll !important;
-//   }
-// }
