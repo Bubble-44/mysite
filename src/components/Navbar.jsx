@@ -22,10 +22,7 @@ function Navbar() {
 
         Projects
       </button>
-      <button className="nav-btn">
-
-        Contact
-      </button>
+  
     </nav>
   );
 }
