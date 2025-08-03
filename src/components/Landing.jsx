@@ -1,6 +1,5 @@
 import React from 'react';
-import Typewriter from '.components/Typewriter';
-import hero from '../assets/heroText.json';
+import Typewriter from './Typewriter';
 import '../styles/landing.scss';
 import '../styles/code-effect.css';
 import { landingSegments } from './array';

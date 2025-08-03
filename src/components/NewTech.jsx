@@ -1,5 +1,5 @@
 import React from 'react';
-import Typewriter from '.components/Typewriter';
+import Typewriter from './Typewriter';
 import '../styles/code-effect-tech.css';
 import reactLogo from '../assets/react.svg';
 import hero from '../assets/phone.json';
