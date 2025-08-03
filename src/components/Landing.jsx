@@ -1,5 +1,5 @@
 import React from 'react';
-import Typewriter from './Typewriter';
+import Typewriter from './typewriter';
 import '../styles/landing.scss';
 import '../styles/code-effect.css';
 import { landingSegments } from './array';
