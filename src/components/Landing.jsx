@@ -1,7 +1,7 @@
 import React from 'react';
 import Typewriter from './typewriter';
 import hero from '../assets/heroText.json';
-import '../styles/Landing.scss';
+import '../styles/landing.scss';
 import '../styles/code-effect.css';
 import { landingSegments } from './array';
 
