@@ -1,5 +1,5 @@
 import React from 'react';
-import Typewriter from './typewriter';
+import Typewriter from './Typewriter';
 import hero from '../assets/heroText.json';
 import '../styles/landing.scss';
 import '../styles/code-effect.css';
