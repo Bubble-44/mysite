@@ -53,7 +53,7 @@ function Tech() {
               <div className="tech-box p-3 shadow-sm bg-white">
                 <h3 className="fs-5 mb-2">API Integrations</h3>
                 <p className="fs-6 mb-0">
-                  Whatever specialized tools or platforms you rely on—payment gateways, social feeds, industry databases—we ensure your website integrates flawlessly.
+                  Whatever specialized tools or platforms you rely on—payment gateways, social feeds, industry databases we ensure your website integrates flawlessly.
                 </p>
               </div>
             </div>

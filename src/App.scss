@@ -1,7 +1,6 @@
 .app-container {
   margin: 0 auto; // Remove top margin if present
   padding: 0;     // Remove top padding if present
-  background: #fff;
   overscroll-behavior: none;
 }
 
@@ -11,37 +10,8 @@ p {
 
 
 
-// Navbar Styles
 
-.site-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.1rem 2rem;
-  background: #ffffff00;
-  min-height: 40px;
-  position: fixed;   // Changed from sticky to fixed
-  top: 0;
-  left: 0;
-  width: 100vw;      // Ensure it stretches across the top
-  z-index: 100;
-}
 
-.site-logo {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  z-index: 3;
-}
-
-.site-menu-toggle {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  z-index: 3;
-
-}
 
 
 // Dropdown Menu Styles
@@ -167,7 +137,7 @@ p {
 .phone-section {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #fff; // Already present, good!
+
   z-index: 1;
   position: relative;     // Add this for stacking context
 }

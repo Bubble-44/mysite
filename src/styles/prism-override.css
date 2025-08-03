@@ -8,19 +8,25 @@ code[class*="language-"] * {
   box-shadow: none !important;
   padding: 0 !important;
   margin: 0 !important;
+  opacity: .5 !important;
 }
 
-/* Custom subtle style */
-.typewriter-subtle {
-  font-size: 2rem;
-  opacity: 0.3;
-  color: #213547;
+/*
+.my-code-block,
+.my-code-block code,
+.my-code-block .token {
+  color: unset !important;
 }
 
-/* Custom bold style */
-.typewriter-bold {
-  font-size: 2rem;
-  opacity: 1;
-  color: #6610f2;
-  font-weight: bold;
+
+
+/*
+/*
+.my-code-block,
+.my-code-block code,
+.my-code-block .token {
+  color: #0000007c !important;
+  background: none !important;
 }
+*/
+

@@ -1,24 +1,27 @@
-import { useState } from 'react';
 import './App.scss';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+
 import Phone from './components/Phone';
-import Tech from './components/Tech';
 import About from './components/About';
 import Contact from './components/Contact';
+import NewTech from './components/NewTech';
+import Landing from './components/Landing';
+import ScrollCounter from './components/ScrollCounter';
 
 function App() {
   return (
-    <>
-      <Hero />
+    <div className="app-container">
       <Navbar />
-      <div className="App">
+      <ScrollCounter />
+      <div style={{ marginTop: '64px' }}>
+        <Landing />
+        
         <Phone />
-        <Tech />
+        <NewTech />
         <About />
         <Contact />
       </div>
-    </>
+    </div>
   );
 }
 

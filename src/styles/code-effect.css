@@ -1,0 +1,50 @@
+.my-code-block,
+.my-code-block code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  opacity: .5 !important;
+  font-size: .8rem !important;
+  font-family: Arial, sans-serif !important;
+}
+
+/* Default override for all code blocks */
+pre[class*="language-"],
+code[class*="language-"] pre[class*="language-"] *,
+code[class*="language-"] * {
+  text-shadow: none !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  color: #ffffff !important; /* Ensure text color is set */
+}
+
+
+.section-title {
+  color: #000000 !important;
+  font-weight: bold;
+  font-size: 1.2rem !important;
+  text-align: center !important;
+  opacity: 1 !important;
+  white-space: normal !important;   /* <-- allow wrapping */
+  word-break: break-word;
+  overflow-wrap: break-word;        /* <-- helps long words wrap */
+}
+
+
+.section-paragraph,
+.section-paragraph pre,
+.section-paragraph code {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  text-align: left !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  padding: .1em .1rem !important;
+  margin: 0rem !important;
+  background: transparent !important;
+  
+  box-sizing: border-box;
+  display: block !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}

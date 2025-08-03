@@ -1,0 +1,93 @@
+.site-navbar {
+  display: flex;
+  align-items: flex-end;
+  background: #1e1e1e;
+  padding: 0.1rem 1rem;
+  min-height: 48px;
+  height: 48px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.90);
+}
+
+.nav-btn,
+.logo-btn {
+  display: flex;
+  align-items: center; // Center vertically
+  justify-content: center; // Center horizontally
+  background: #2d2d2d;
+  border: none;
+  border-radius: 8px 8px 0 0; // Top border radius
+  margin-right: 0.25rem;
+  padding: 0 1.2rem;
+  color: #d4d4d4;
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  min-width: 80px;
+  height: 48px;
+}
+
+.logo-btn {
+  background: #23272f;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.nav-btn:hover,
+.nav-btn:focus,
+.logo-btn:hover,
+.logo-btn:focus {
+  background: #23272f;
+  color: #fff;
+}
+
+.site-logo {
+  object-fit: contain;
+  z-index: 3;
+}
+
+.main-logo {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.navbar-src {
+  margin-right: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.2;
+}
+
+/* Responsive: fit buttons on small screens */
+@media (max-width: 600px) {
+  .site-navbar {
+    padding: 0.1rem 0.2rem;
+    min-height: 40px;
+    height: 40px;
+  }
+  .nav-btn,
+  .logo-btn {
+    font-size: .8rem;
+    min-width: 60px;
+    padding: 0 0.5rem;
+    height: 40px;
+    border-radius: 8px 8px 0 0; // Keep top border radius on mobile
+  }
+  .main-logo {
+    width: 35px;
+    height: 35px;
+  }
+  .navbar-src {
+    font-size: 0.6rem;
+    margin-right: 0.5rem;
+    margin-left: 0.05rem;
+  }
+}
