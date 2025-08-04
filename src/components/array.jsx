@@ -1,7 +1,7 @@
 import hero from '../assets/heroText.json';
 
 
-// Landing component that displays a typewriter effect with Lottie animation
+// Landing component that displays a CodeEffect effect with Lottie animation
 
 
 

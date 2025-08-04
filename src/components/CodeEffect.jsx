@@ -6,7 +6,7 @@ import 'prismjs/components/prism-javascript';
 import { useInView } from './useInView';
 import Lottie from 'lottie-react';
 
-function Typewriter({
+function CodeEffect({
   segments,
   speed = 50,
   className = '',
@@ -206,4 +206,4 @@ function Typewriter({
   );
 }
 
-export default Typewriter;
+export default CodeEffect;

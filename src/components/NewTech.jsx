@@ -1,8 +1,8 @@
 import React from 'react';
-import Typewriter from './typewriter';
 import '../styles/code-effect-tech.css';
 import reactLogo from '../assets/react.svg';
 import hero from '../assets/phone.json';
+import CodeEffect from './CodeEffect';
 
 
 const sections = [
@@ -61,7 +61,7 @@ function NewTech() {
                     {/* Section 1 */}
 
                     <div className="typewriter-section-box  col-lg-8">
-                        <Typewriter
+                        <CodeEffect
                             segments={[
                                 {
                                     text: `import React, { useState } from 'react';`,
@@ -148,7 +148,7 @@ function NewTech() {
 
                 {/* Section 2 */}
                 <div className="typewriter-section-box col-lg-8">
-                    <Typewriter
+                    <CodeEffect
                         segments={[
                             { text: sections[1].codeOpen, language: 'html', className: 'my-code-block' },
                             { text: sections[1].title, language: 'none', className: 'section-title' },
@@ -163,7 +163,7 @@ function NewTech() {
                 </div>
 
                 <div className="typewriter-section-box col-lg-8">
-                    <Typewriter
+                    <CodeEffect
                         segments={[
                             { text: sections[2].codeOpen, language: 'html', className: 'my-code-block' },
                             { text: sections[2].title, language: 'none', className: 'section-title' },
@@ -178,7 +178,7 @@ function NewTech() {
                 </div>
 
                 <div className="typewriter-section-box col-lg-8 ">
-                    <Typewriter
+                    <CodeEffect
                         segments={[
                             { text: sections[3].codeOpen, language: 'html', className: 'my-code-block' },
                             { text: sections[3].title, language: 'none', className: 'section-title' },
@@ -193,7 +193,7 @@ function NewTech() {
                 </div>
 
                 <div className="typewriter-section-box col-lg-8">
-                    <Typewriter
+                    <CodeEffect
                         segments={[
                             { text: sections[4].codeOpen, language: 'html', className: 'my-code-block' },
                             { text: sections[4].title, language: 'none', className: 'section-title' },
