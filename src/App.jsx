@@ -6,7 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import NewTech from './components/NewTech';
 import Landing from './components/Landing';
-import ContactSlide from './components/contactSlide';
+import ContactSlide from './components/ContactSlide'
 import ScrollCounter from './components/ScrollCounter';
 
 function App() {
