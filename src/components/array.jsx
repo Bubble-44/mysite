@@ -1,4 +1,6 @@
 import hero from '../assets/heroText.json';
+import '../App.scss';
+
 
 
 // Landing component that displays a CodeEffect effect with Lottie animation
@@ -73,7 +75,16 @@ export const landingSegments = [
     type: 'button',
     text: 'Click Me',
     onClick: () => alert('Button clicked!'),
-    style: { margin: '1rem auto', display: 'block' }
+    className: 'primary-button',
+  }
+];
+
+
+export const consoleSegments = [
+  {
+    text: `export default DontBlendStandInOut;`,
+    language: 'html',
+    className: 'my-code-block'
   }
 ];
 

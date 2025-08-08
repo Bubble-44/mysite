@@ -6,9 +6,9 @@ import { landingSegments } from './array';
 
 function Landing() {
   return (
-    <div className="container-fluid landing-container">
-      <div className="row justify-content-center hero-row">
-        <div className="landing-box shadow-sm col-lg-8 col-md-8 col-sm-8 col-10">
+    <div className="landing-container container-fluid">
+      <div className="row justify-content-center align-items-center min-vh-100">
+        <div className="landing-box col-10 col-sm-10 col-md-8 col-lg-7 col-xl-6 shadow-sm">
           <CodeEffect
             segments={landingSegments}
             speed={3}

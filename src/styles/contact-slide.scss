@@ -1,0 +1,210 @@
+.contact-slide {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 16vh;
+  min-height: 6vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 200;
+  background-image: url('../assets/techBackground.png');
+  background-size: cover;
+  background-position: center;
+    transition: height 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); // <-- Add this line
+
+}
+
+
+
+   @media (max-width: 960px) and (orientation: landscape) {
+    .contact-slide {
+      height: 27vh; // or adjust as needed for visibility
+      min-height: 20vh;
+    }
+  }
+ @media (max-width: 600px)  {
+    .contact-slide {
+      height: 12vh; // or adjust as needed for visibility
+      min-height: 6vh;
+    }
+}
+  
+
+
+
+
+
+.contact-slide-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+.contact-slide-header {
+  min-height: 6vh;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+
+}
+@media (max-width: 600px) and (orientation: landscape) {
+  .contact-slide-header {
+    height: 5vh; // or adjust as needed for visibility
+    min-height: 5vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-slide-header {
+    height: 4vh; // or adjust as needed for portrait/small screens
+    min-height: 4vh;
+  }
+}
+
+.contact-slide-main {
+  min-height: 44px;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.terminal-button {
+  height: 34px;
+  min-height: 34px;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  padding: 0 .6rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  .terminal-button {
+    height: 34px;
+    min-height: 34px;
+    font-size: clamp(0.8rem, 4vw, 0.95rem);
+    padding: 0 0.6rem;
+  }
+}
+
+
+
+
+.contact-slide-tabs {
+    display: flex;
+    align-items: center;
+}
+
+.tab {
+    color: #d4d4d4;
+    letter-spacing: 0.5px;
+    background: transparent;
+    border-radius: 6px 6px 0 0;
+    padding: 0.2em 0.6em;
+    font-size: clamp(0.3rem, 1vw, .7rem);
+}
+
+.header-img-placeholder {
+    width: clamp(10px, 1vw, 24px);
+    height: clamp(10px, 1vw, 24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.header-text {
+    color: #d4d4d4;
+    margin-left: 0.5rem;
+    font-size: clamp(0.3rem, 1vw, 1rem);
+}
+
+
+
+.tab-underline {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #007acc;
+    border-radius: 2px;
+    margin-top: 2px;
+}
+
+.contact-info-box h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-info-box hr {
+    border-top: 2px solid #ffffff;
+    width: 80%;
+    margin: 1rem auto;
+    opacity: 1;
+}
+
+.contact-info-box p {
+    color: #fff;
+    text-align: left;
+    margin: 0;
+}
+
+ .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    padding: 1rem;
+    max-width: 98vw;
+    width: 100vw;
+  }
+}
+
+.contact-slide-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,44 @@
+.contact-form {
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+.contact-form .form-control {
+    background: none;
+    border: 2px solid #ffffffa6;
+    border-radius: 8px;
+    color: #222;
+    margin-bottom: 1rem;
+    box-shadow: none;
+    transition: border-color 0.2s;
+}
+
+.contact-form .form-control:focus {
+    border-color: #ffffff00;
+    outline: none;
+    box-shadow: none;
+}
+
+.contact-form .form-control::placeholder {
+    color: #fff !important;
+    opacity: 0.8;
+}
+
+.contact-form .primary-button {
+    display: block;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+}
+
+.contact-form .form-control,
+.contact-form .form-control:focus {
+    background: none !important;
+    color: #fff !important;
+    border: 2px solid #ffffffa6;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: none;
+    transition: border-color 0.2s;
+}

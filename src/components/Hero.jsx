@@ -53,24 +53,24 @@ function Hero() {
                 style={{ width: '100%', height: 'auto', maxWidth: 400, margin: '0 auto' }}
               />
               <p className="text mt-3">
-                Beyond just building websites, 
-                I engineer custom, high-performing digital experiences. 
-                Expect intuitive design, robust backend, and a flawless, 
-                responsive site that looks great and performs perfectly 
+                Beyond just building websites,
+                I engineer custom, high-performing digital experiences.
+                Expect intuitive design, robust backend, and a flawless,
+                responsive site that looks great and performs perfectly
                 on any device.
               </p>
               <button
-  className="primary-button mt-3"
-  onClick={e => {
-  const techSection = document.getElementById('tech');
-  if (techSection) {
-    techSection.scrollIntoView({ behavior: 'smooth' });
-  }
-  e.target.blur(); // Remove focus after click
-}}
->
-  LEARN MORE
-</button>
+                className="primary-button mt-3"
+                onClick={e => {
+                  const techSection = document.getElementById('tech');
+                  if (techSection) {
+                    techSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                  e.target.blur(); // Remove focus after click
+                }}
+              >
+                LEARN MORE
+              </button>
             </div>
           </div>
         </div>
