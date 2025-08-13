@@ -1,9 +1,7 @@
 import React from 'react';
 import CodeEffect from './CodeEffect';
 import { techSectionsSegments } from './array';
-import '../styles/tech-card.scss';
 
-// logos
 import htmlLogo from '../assets/HTML.svg';
 import javaLogo from '../assets/java.svg';
 import reactLogo from '../assets/react.svg';
