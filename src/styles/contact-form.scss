@@ -42,3 +42,27 @@
     box-shadow: none;
     transition: border-color 0.2s;
 }
+
+.contact-form-wrapper {
+  max-height: 80vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: clamp(12px, 2vw, 24px);
+}
+
+.contact-info-box h2 {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+.contact-info-box p {
+  line-height: 1.5;
+}
+
+/* Keep inputs readable on small screens */
+@media (max-width: 576px) {
+  .contact-form .form-control {
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+  .contact-form .primary-button {
+    width: 100%;
+  }
+}

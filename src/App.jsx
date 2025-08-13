@@ -3,11 +3,11 @@ import Navbar from './components/Navbar';
 
 import Phone from './components/Phone';
 import About from './components/About';
-import Contact from './components/Contact';
 import NewTech from './components/NewTech';
 import Landing from './components/Landing';
 import ContactSlide from './components/ContactSlide'
 import ScrollCounter from './components/ScrollCounter';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Phone />
         <NewTech />
         <About />
-        <Contact />
+        <Projects />
       </div>
   );
 }

@@ -10,23 +10,3 @@ code[class*="language-"] * {
   margin: 0 !important;
   opacity: .5 !important;
 }
-
-/*
-.my-code-block,
-.my-code-block code,
-.my-code-block .token {
-  color: unset !important;
-}
-
-
-
-/*
-/*
-.my-code-block,
-.my-code-block code,
-.my-code-block .token {
-  color: #0000007c !important;
-  background: none !important;
-}
-*/
-

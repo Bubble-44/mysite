@@ -14,10 +14,13 @@ function ScrollCounter() {
     };
   }, []);
 
-  // Estimate line height (adjust if needed)
+  // Estimate line height (kept fixed so count math remains correct)
   const lineHeight = 20;
   const count = Math.ceil(pageHeight / lineHeight);
   const numbers = Array.from({ length: count }, (_, i) => i + 1);
+
+  // Responsive font size for the numbers
+  const numberFontSize = 'clamp(0.65rem, 1.2vw, 0.9rem)';
 
   return (
     <div
@@ -28,17 +31,26 @@ function ScrollCounter() {
         width: '40px',
         height: pageHeight - 60 + 'px',
         overflow: 'hidden',
-        color: 'white',
-        opacity: 0.2,
+        color: 'black',
+        opacity: 0.4,
         padding: '0.5rem',
         fontFamily: 'monospace',
-        zIndex: 1,
-        pointerEvents: 'none'
+        fontSize: numberFontSize,           // clamp applied
+        zIndex: 5,
+        pointerEvents: 'none',
       }}
     >
       <div>
         {numbers.map(n => (
-          <div key={n} style={{ height: lineHeight }}>{n}</div>
+          <div
+            key={n}
+            style={{
+              height: lineHeight,
+              lineHeight: `${lineHeight}px`, // keeps text vertically centered
+            }}
+          >
+            {n}
+          </div>
         ))}
       </div>
     </div>

@@ -4,105 +4,68 @@
   overscroll-behavior: none;
 }
 
-/* Default override for all code blocks */
-pre,
-code,
-pre[class*="language-"],
-code[class*="language-"],
-.my-code-block {
-  text-shadow: none !important;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  opacity: 1 !important;
-}
-
 
 .primary-button {
-  border: 1px solid #fff;
-  background: transparent;
+  border: 1px solid #222;
+  background: #222;
   color: #fff;
-  padding: 0.25em 2em;
-  border-radius: 30px;
-  font-size: 1.1rem;
+  padding: 0.35em 0.7em;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: clamp(0.7rem, 1.5vw, 0.95rem);
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 120px;
+  min-width: 60px;
+  display: block;
   outline: none;
-  display: block;         // Make it a block element
+}
 
-  text-align: center;     // Center text inside the button
+.primary-button.open {
+  background: #eee;
+  color: #222;
+  box-shadow: 0 0 0 2px #bbb;
 }
 
 .primary-button:hover,
 .primary-button:focus {
-  background: rgba(255,255,255,0.5);
+  background: #eee;
   color: #222;
 }
 
 
 
 
-// phone section styles
-
-.phone-section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-
-  z-index: 1;
-  position: relative;     // Add this for stacking context
+// ...existing code...
+.gradient-text {
+  background: linear-gradient(90deg, #e8e8e8 0%, #2d9ade 45%, #e8e8e8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: none; /* remove extra glow */
 }
 
-.phone-animation {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
-  margin: 0 auto;
-  display: block;
+.code-comment {
+  color: rgba(255,255,255,0.6);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
 }
+.code-comment.dim { opacity: 0.6; }
+// ...existing code...
 
-.phone-content-col {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.phone-content-box {
-  background: rgba(0,0,0,0.5);
-  border-radius: 20px;
-  padding: 2rem;
-  color: #fff;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.phone-content-box h2 {
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #fff;
-}
-
-.phone-content-box hr {
-  border-top: 2px solid #ffffff;
-  width: 80%;
-  margin: 1rem auto;
-  opacity: 1;
-}
-
-.phone-content-box p {
-  color: #fff;
-  text-align: left;
-  margin: 0;
-}
 
 // About section styles
 
 .about {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: #fff; // Add this line!
   position: relative;     // Add this for stacking context
+  margin-top: 1rem;
 }
 
 .about-text-box {

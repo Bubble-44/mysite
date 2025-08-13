@@ -1,9 +1,16 @@
+:root {
+  --vh: 1vh; /* JS will update this to visualViewport */
+}
+
+
+
 .contact-slide {
   position: fixed;
   bottom: 0;
   left: 0;
+  right: 0; /* ensure full width stretch */
   width: 100vw;
-  height: 16vh;
+  height: 19vh;
   min-height: 6vh;
   display: flex;
   flex-direction: column;
@@ -12,28 +19,45 @@
   background-image: url('../assets/techBackground.png');
   background-size: cover;
   background-position: center;
-    transition: height 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); // <-- Add this line
-
+  transition: height 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); /* Add this line */
 }
-
 
 
    @media (max-width: 960px) and (orientation: landscape) {
-    .contact-slide {
-      height: 27vh; // or adjust as needed for visibility
-      min-height: 20vh;
-    }
+  .contact-slide {
+    height: 25vh;
+    min-height: 20vh;
   }
- @media (max-width: 600px)  {
-    .contact-slide {
-      height: 12vh; // or adjust as needed for visibility
-      min-height: 6vh;
-    }
 }
-  
+
+   @media (max-width: 700px) and (orientation: landscape) {
+  .contact-slide {
+    height: 20vh;
+    min-height: 20vh;
+  }
+}
 
 
 
+@media (max-width: 600px) {
+  .contact-slide {
+    height: 20vh;
+    min-height: 10vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-slide {
+    height: 13vh;
+    min-height: 6vh;
+  }
+}
+
+
+.contact-slide.is-open {
+  height: calc(var(--vh) * 100) !important;
+  min-height: calc(var(--vh) * 100) !important;
+}
 
 
 .contact-slide-overlay{
@@ -56,7 +80,7 @@
 }
 @media (max-width: 600px) and (orientation: landscape) {
   .contact-slide-header {
-    height: 5vh; // or adjust as needed for visibility
+    height: 6vh; // or adjust as needed for visibility
     min-height: 5vh;
   }
 }
@@ -69,11 +93,9 @@
 }
 
 .contact-slide-main {
-  min-height: 44px;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  position: relative;
+  flex: 1 1 auto;   /* fill the panel under the header */
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -162,32 +184,30 @@
     margin: 0;
 }
 
- .contact-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-height: 70vh;
-    overflow-y: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-}
+.contact-container {
+  opacity: 0;
+  transition: opacity 0.5s;
+  width: 100%;
+  height: 100vh;
+  
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 2rem;
+  margin-top: 2vh;
 
-@media (max-width: 900px) {
-  .contact-container {
-    padding: 1rem;
-    max-width: 98vw;
-    width: 100vw;
-  }
+  /* Frosted glass background */
+  background: rgba(34, 34, 34, 0.35);        // lighter alpha so blur shows
+  -webkit-backdrop-filter: saturate(1.1) blur(14px);
+  backdrop-filter: saturate(1.1) blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);  // optional subtle edge
+  box-shadow: 0 6px 40px rgba(0,0,0,0.35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-container.fade-in {
+  opacity: 1;
 }
 
 .contact-slide-content {
@@ -203,8 +223,13 @@
 
 .left-section,
 .right-section {
-  flex: 1;
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.right-section {
+  flex-direction: column;
+  justify-content: flex-start; /* top; use flex-end to pin bottom, or center to center */
+  overflow: hidden;
 }

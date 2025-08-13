@@ -15,6 +15,7 @@
 
 .nav-btn,
 .logo-btn {
+  position: relative; /* underline anchor */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,28 +25,75 @@
   margin-right: 0.25rem;
   padding: 0 1.2rem;
   color: #d4d4d4;
-  font-size: clamp(0.8rem, 2vw, 1.1rem); // Responsive font size
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
   font-family: inherit;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
   min-width: 80px;
   height: 48px;
+  -webkit-tap-highlight-color: transparent;
 }
 
+/* Logo default must be non-active so it can change color */
 .logo-btn {
-  background: #23272f;
-  color: #fff;
+  background: #2d2d2d;   /* was #23272f (active color) */
+  color: #d4d4d4;        /* was #fff (active color) */
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
-.nav-btn:hover,
-.nav-btn:focus,
-.logo-btn:hover,
-.logo-btn:focus {
+/* Active tab uses focused colors */
+.nav-btn.active,
+.logo-btn.active {
   background: #23272f;
   color: #fff;
+}
+
+/* Hover hint only for non-active tabs */
+.nav-btn:hover:not(.active),
+.logo-btn:hover:not(.active) {
+  background: #393939;
+  color: #eaeaea;
+}
+
+/* Keyboard focus outline (doesn’t force active colors) */
+.nav-btn:focus-visible,
+.logo-btn:focus-visible {
+  outline: 2px dashed rgba(13, 110, 253, 0.6);
+  outline-offset: 2px;
+}
+
+/* Blue underline for active/focus/active-click (including logo) */
+.nav-btn::after,
+.logo-btn::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  height: 3px;
+  background: #0d6efd;
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0.2);
+  transform-origin: center;
+  transition: opacity .18s ease, transform .18s ease;
+  pointer-events: none;
+}
+
+/* Show underline when scrolled active, keyboard focus, or mouse active */
+.nav-btn:is(.active, :focus, :focus-visible, :active)::after,
+.logo-btn:is(.active, :focus, :focus-visible, :active)::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Hover underline hint only if not already active */
+.nav-btn:hover:not(.active)::after,
+.logo-btn:hover:not(.active)::after {
+  opacity: .4;
+  transform: scaleX(.7);
 }
 
 .main-logo {
@@ -70,35 +118,44 @@
   opacity: 0.2;
 }
 
-/* Responsive: fit buttons on small screens */
+/* Responsive */
 @media (max-width: 600px) {
   .site-navbar {
     padding: 0.1rem 0.2rem;
     min-height: 40px;
     height: 40px;
   }
-  @media (max-width: 600px) {
+
   .nav-btn,
   .logo-btn {
-    font-size: clamp(0.6rem, 3vw, 0.9rem); // Responsive font size for small screens
+    font-size: clamp(0.6rem, 3vw, 0.9rem);
     min-width: 60px;
     padding: 0 0.5rem;
     height: 40px;
     border-radius: 8px 8px 0 0;
   }
-}
+
+  .nav-btn::after,
+  .logo-btn::after {
+    left: 12%;
+    right: 12%;
+    height: 2px;
+  }
+
   .main-logo {
     width: 35px;
     height: 35px;
   }
+
   .nav-icon {
     width: 16px;
     height: 16px;
     margin-right: 0.4rem;
   }
+
   .navbar-src {
     font-size: 0.6rem;
     margin-right: 0.5rem;
-    margin-left: 0.05rem;
+    margin-left: 0.5rem;
   }
 }

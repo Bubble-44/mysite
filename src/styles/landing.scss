@@ -1,8 +1,17 @@
+:root {
+  --nav-h: 56px; // adjust to your fixed navbar height
+}
+
 .landing-container {
   position: relative;
+    padding-top: var(--nav-h);                // add space for navbar
+
+  /* visible viewport height with fallbacks */
   min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   width: 100%;
-  overflow: auto;
+  
 }
 
 .landing-container::before {
@@ -16,12 +25,21 @@
   opacity: 0.05;
 }
 
+/* Row should fill the visible viewport too */
+.landing-row {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: calc(100dvh - var(--nav-h));  // visible area under navbar
+  align-items: center;  
+}
+
+/* Box styles (allow natural growth by default) */
 .landing-box {
-  background: #23272f;
+  background: #00000080;
   border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-  opacity: .8;
+  padding: 1rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  opacity: .7;
   width: 100%;
   min-height: 0;
   box-sizing: border-box;
@@ -29,14 +47,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+
+  margin-bottom: 20vh;                        // room for contact slider
 }
 
-@media (max-width: 900px), (max-height: 500px) {
+/* Landscape: pin content to top under navbar; no internal cap/scroll */
+@media (orientation: landscape) {
+  .landing-row { align-items: flex-start; }  // top-align the row
   .landing-box {
-    padding: 1rem;
+    max-height: none;                        // let page scroll normally
   }
 }
 
-.hero-row {
-  width: 100vw;
+/* Optional tighter small-landscape tweaks */
+@media (orientation: landscape) and (max-height: 500px) {
+  .landing-box {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 3vh;
+  }
 }
+
+/* Existing small tweaks stay */
+@media (max-width: 900px), (max-height: 500px) {
+  .landing-box { padding: 1rem; }
+}
+
